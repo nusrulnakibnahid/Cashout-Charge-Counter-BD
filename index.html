@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ক্যাশ আউট এক্সপ্রেস BD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="header">ক্যাশ আউট এক্সপ্রেস BD</h1>
+    
+    <!-- Language Switcher in the top right corner -->
+    <div class="language-switcher">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('bn')">বাংলা</button>
+    </div>
+
+    <div class="nav">
+        <button class="home" onclick="showContent('home')">HOME</button>
+        <button class="bkash" onclick="showContent('bkash')">BKASH</button>
+        <button class="nagad" onclick="showContent('nagad')">NAGAD</button>
+        <button class="rocket" onclick="showContent('rocket')">ROCKET</button>
+        <button class="upay" onclick="showContent('upay')">UPAY</button>
+    </div>
+    
+    <div class="container">
+        <div id="home" class="content active">
+            <img src="img/Bkash-Logo.png" alt="bKash Logo" width="200">
+            <img src="img/Nagad-Logo.png" alt="nagad Logo" width="200">
+            <img src="img/Rocket-Logo.png" alt="rocket Logo" width="200">
+            <img src="img/Upay-Logo.png" alt="upay Logo" width="90">
+            <p id="home-description">Cashout Charge for Bkash, Nagad, Rocket, and Upay in Bangladesh.</p>
+        </div>
+        
+        <div id="bkash" class="content">
+            <img src="img/Bkash-Logo.png" alt="bKash Logo" width="150">
+            <h2 id="bkash-title">Bkash Cashout Calculator</h2>
+            <p id="bkash-description">Cashing out from: 
+                <select id="source-bkash" onchange="calculate('bkash')">
+                    <option value="1.25">App : 1.25%</option>
+                    <option value="1.25">*247# : 1.25%</option>
+                </select>
+            </p>
+            <input type="number" id="amount-bkash" placeholder="Enter amount" oninput="calculate('bkash')">
+            <p id="result-bkash"></p>
+        </div>
+
+        <div id="nagad" class="content">
+            <img src="img/Nagad-Logo.png" alt="Nagad Logo" width="150">
+            <h2 id="nagad-title">Nagad Cashout Calculator</h2>
+            <p id="nagad-description">Cashing out from:
+                <select id="source-nagad" onchange="calculate('nagad')">
+                    <option value="1.25">App : 1.25%</option>
+                    <option value="1.50">*167# : 1.50%</option>
+                </select>
+            </p>
+            <input type="number" id="amount-nagad" placeholder="Enter amount" oninput="calculate('nagad')">
+            <p id="result-nagad"></p>
+        </div>
+
+        <div id="rocket" class="content">
+            <img src="img/Rocket-Logo.png" alt="Rocket Logo" width="150">
+            <h2 id="rocket-title">Rocket Cashout Calculator</h2>
+            <p id="rocket-description">Cashing out from:
+                <select id="source-rocket" onchange="calculate('rocket')">
+                    <option value="1.25">App : 1.25%</option>
+                    <option value="1.25">*322# : 1.25%</option>
+                </select>
+            </p>
+            <input type="number" id="amount-rocket" placeholder="Enter amount" oninput="calculate('rocket')">
+            <p id="result-rocket"></p>
+        </div>
+
+        <div id="upay" class="content">
+            <img src="img/Upay-Logo.png" alt="Upay Logo" width="90">
+            <h2 id="upay-title">Upay Cashout Calculator</h2>
+            <p id="upay-description">Cashing out from:
+                <select id="source-upay" onchange="calculate('upay')">
+                    <option value="1.25">App : 1.25%</option>
+                    <option value="1.25">*268# : 1.25%</option>
+                </select>
+            </p>
+            <input type="number" id="amount-upay" placeholder="Enter amount" oninput="calculate('upay')">
+            <p id="result-upay"></p>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
