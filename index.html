@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ক্যাশ আউট এক্সপ্রেস BD</title>
+    <title>FeeFinder BD</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="header">ক্যাশ আউট এক্সপ্রেস BD</h1>
+    <h1 id="header">Fee Finder Bangladesh</h1>
+
+    <!-- 🔘 Dark Mode Button in Right Side -->
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <span id="darkModeIcon">🌙</span>
+</button>
+
     
     <!-- Language Switcher in the top right corner -->
     <div class="language-switcher">
@@ -37,8 +43,8 @@
             <h2 id="bkash-title">Bkash Cashout Calculator</h2>
             <p id="bkash-description">Cashing out from: 
                 <select id="source-bkash" onchange="calculate('bkash')">
-                    <option value="1.25">App : 1.25%</option>
-                    <option value="1.25">*247# : 1.25%</option>
+                    <option value="1.49">App : 1.49%</option>
+                    <option value="1.49">*247# : 1.49%</option>
                 </select>
             </p>
             <input type="number" id="amount-bkash" placeholder="Enter amount" oninput="calculate('bkash')">
@@ -63,8 +69,8 @@
             <h2 id="rocket-title">Rocket Cashout Calculator</h2>
             <p id="rocket-description">Cashing out from:
                 <select id="source-rocket" onchange="calculate('rocket')">
-                    <option value="1.25">App : 1.25%</option>
-                    <option value="1.25">*322# : 1.25%</option>
+                    <option value="1.25">App : 0.9%</option>
+                    <option value="1.50">*322# : 1.67%</option>
                 </select>
             </p>
             <input type="number" id="amount-rocket" placeholder="Enter amount" oninput="calculate('rocket')">
@@ -76,8 +82,8 @@
             <h2 id="upay-title">Upay Cashout Calculator</h2>
             <p id="upay-description">Cashing out from:
                 <select id="source-upay" onchange="calculate('upay')">
-                    <option value="1.25">App : 1.25%</option>
-                    <option value="1.25">*268# : 1.25%</option>
+                    <option value="1.4">App : 1.4%</option>
+                    <option value="1.4">*268# : 1.4%</option>
                 </select>
             </p>
             <input type="number" id="amount-upay" placeholder="Enter amount" oninput="calculate('upay')">
